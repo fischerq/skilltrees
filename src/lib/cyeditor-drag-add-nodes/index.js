@@ -48,7 +48,7 @@ class DragAddNodes {
     }
     let categoryDom = Object.keys(categorys).map(item => {
       let shapeItems = categorys[item].map(data => {
-        return `<img src="${data.src}"  class="shape-item" draggable="true" data-id="${data._id}" />`
+        return `<div class="node-container"> <div class="node" style="background-color:${data.bg}" draggable="true" data-id="${data._id}"></div></div>`
       }).join('')
       return `<div class="category">
                   <div class="title">${item}</div>
@@ -64,7 +64,7 @@ class DragAddNodes {
       e.preventDefault()
     }
 
-    utils.query('.shape-item').forEach(item => {
+    utils.query('.node').forEach(item => {
       item.addEventListener('dragstart', (e) => {
         e.dataTransfer.setData('id', e.target.getAttribute('data-id'))
       })

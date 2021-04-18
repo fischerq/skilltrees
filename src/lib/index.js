@@ -137,23 +137,23 @@ class CyEditor extends EventBus {
                 <div id="cy"></div>
                 ${right}
               </div>`
-    let editorContianer
+    let editorContainer
     if (container) {
       if (typeof container === 'string') {
-        editorContianer = utils.query(container)[ 0 ]
+        editorContainer = utils.query(container)[ 0 ]
       } else if (utils.isNode(container)) {
-        editorContianer = container
+        editorContainer = container
       }
-      if (!editorContianer) {
+      if (!editorContainer) {
         console.error('There is no any element matching your container')
         return
       }
     } else {
-      editorContianer = document.createElement('div')
-      editorContianer.className = 'cy-editor-container'
-      document.body.appendChild(editorContianer)
+      editorContainer = document.createElement('div')
+      editorContainer.className = 'cy-editor-container'
+      document.body.appendChild(editorContainer)
     }
-    editorContianer.innerHTML = domHtml
+    editorContainer.innerHTML = domHtml
   }
 
   _initEvents () {

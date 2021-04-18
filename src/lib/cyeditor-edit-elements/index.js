@@ -5,7 +5,7 @@ import utils from '../../utils'
 
 const defaults = {
   container: false,
-  attrs: [ 'name', 'height', 'width', 'color', 'background-color' ]
+  attrs: [ 'name', 'height', 'width', 'color', 'background-color', 'image' ]
 }
 
 class EditElements {
@@ -50,7 +50,7 @@ class EditElements {
     this._panel.style.display = 'none'
   }
 
-  _panelHtml (params = { showName: true, showBgColor: true, showColor: true, showRect: true, colorTitle: utils.localize('elements-text') }) {
+  _panelHtml (params = { showName: true, showBgColor: true, showColor: true, showRect: true, showImage: true, colorTitle: utils.localize('elements-text') }) {
     this._panel.innerHTML = `<div class="panel-title">${utils.localize('elements-title')}${params.title || ''}</div>
               <div class="panel-body" id="info-items">
                 <div class="info-item-wrap" style="${!params.showName ? 'display:none' : ''}">${utils.localize('elements-label')}：
@@ -71,6 +71,9 @@ class EditElements {
                     <div class="info-item">
                         <input class="input color-input" name="background-color" autocomplete="off" type="color">
                     </div>
+                </div>
+                <div class="info-item-wrap" style="${!params.showImage ? 'display:none' : ''}">${utils.localize('elements-image')}：
+                    <input class="input info-item" name="image" type="text" value="">
                 </div>
             </div>`
   }
@@ -97,7 +100,8 @@ class EditElements {
     let selected = this.cy.$(':selected')
     this.selected = selected
     let allNode = selected.every(it => it.isNode())
-    let opt = { showName: allNode, showBgColor: allNode, showColor: true, showRect: allNode, colorTitle: allNode ? utils.localize('elements-text-color') : utils.localize('elements-color') }
+    let singleNode = (selected.length === 1 && selected[0].isNode())
+    let opt = { showName: allNode, showBgColor: allNode, showColor: true, showRect: allNode, showImage: singleNode, colorTitle: allNode ? utils.localize('elements-text-color') : utils.localize('elements-color') }
     if (selected.length > 1) {
       this._infos.name = ''
       this._panelHtml(opt)

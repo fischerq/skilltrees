@@ -36,7 +36,7 @@
     box-sizing: border-box;
 }
 
-#editor .shapes img.shape-item {
+#editor .shapes .node-container {
     width: 80px;
     height: 80px;
     padding: 4px;
@@ -44,9 +44,17 @@
     border: 1px solid rgba(0,0,0,0);
     box-sizing: border-box;
 }
-#editor .shapes img.shape-item:hover {
+
+#editor .shapes .node-container:hover {
     cursor: move;
     border: 1px solid #ccc;
+}
+
+#editor .shapes .node {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    display: inline-block;
 }
 
 #editor .right {

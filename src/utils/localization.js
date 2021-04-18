@@ -25,35 +25,11 @@ const data = {
     'elements-background-color': 'Background',
     'elements-text-color': 'Text color',
     'elements-color': 'Color',
+    'elements-image': 'Image',
     'window-navigator': 'Navigator',
-    'node-types-base-shape': 'Base Shape'
-  },
-  cn: {
-    'toolbar-undo': '撤销',
-    'toolbar-redo': '重做',
-    'toolbar-zoomin': '放大',
-    'toolbar-zoomout': '缩小',
-    'toolbar-boxselect': '框选',
-    'toolbar-copy': '复制',
-    'toolbar-paste': '粘贴',
-    'toolbar-delete': '删除',
-    'toolbar-leveldown': '层级后置',
-    'toolbar-levelup': '层级前置',
-    'toolbar-line-straight': '直线',
-    'toolbar-line-taxi': '折线',
-    'toolbar-line-bezier': '曲线',
-    'toolbar-gridon': '表格辅助',
-    'toolbar-fit': '适应画布',
-    'toolbar-save': '保存',
-    'element-text': '文字',
-    'elements-title': '元素',
-    'elements-label': '名称',
-    'elements-wrap': '尺寸',
-    'elements-background-color': '背景',
-    'elements-text-color': '文字',
-    'elements-color': '颜色',
-    'window-navigator': '导航器',
-    'node-types-base-shape': '基础形状'
+    'node-types-thing': 'Thing',
+    'node-types-skill': 'Skill',
+    'node-types-knowledge': 'Knowledge'
   }
 }
 

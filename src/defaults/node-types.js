@@ -5,106 +5,40 @@
 import roundRectangle from '../assets/node-svgs/round-rectangle.svg'
 import ellipse from '../assets/node-svgs/ellipse.svg'
 import hexagon from '../assets/node-svgs/hexagon.svg'
-import star from '../assets/node-svgs/star.svg'
-import pentagon from '../assets/node-svgs/pentagon.svg'
-import diamond from '../assets/node-svgs/diamond.svg'
-import tag from '../assets/node-svgs/tag.svg'
-import polygon from '../assets/node-svgs/polygon.svg'
 import utils from '../utils'
 
 const defaultNodeTypes = [
   {
-    type: 'ellipse',
+    type: 'thing',
     src: ellipse,
-    bg: '#FFC069',
+    bg: '#2B4162',
     resize: true,
     width: 76,
     height: 76,
-    category: utils.localize('node-types-base-shape'),
+    category: utils.localize('node-types-thing'),
+    image: '',
     buildIn: true
   },
   {
-    type: 'round-rectangle',
+    type: 'skill',
     src: roundRectangle,
-    bg: '#1890FF',
-    resize: true,
-    width: 76,
-    height: 56,
-    category: utils.localize('node-types-base-shape'),
-    buildIn: true
-  },
-  {
-    type: 'diamond',
-    src: diamond,
-    bg: '#5CDBD3',
+    bg: '#721817',
     resize: true,
     width: 76,
     height: 76,
-    category: utils.localize('node-types-base-shape'),
+    category: utils.localize('node-types-skill'),
+    image: '',
     buildIn: true
   },
   {
-    type: 'pentagon',
-    src: pentagon,
-    bg: '#722ed1',
-    resize: true,
-    width: 76,
-    height: 76,
-    category: utils.localize('node-types-base-shape'),
-    buildIn: true
-  },
-  {
-    type: 'tag',
-    src: tag,
-    bg: '#efbae4',
-    resize: true,
-    width: 70,
-    height: 76,
-    category: utils.localize('node-types-base-shape'),
-    buildIn: true
-  },
-  {
-    type: 'star',
-    src: star,
-    bg: '#00e217',
-    resize: true,
-    width: 76,
-    height: 76,
-    category: utils.localize('node-types-base-shape'),
-    buildIn: true
-  },
-  {
-    type: 'hexagon',
+    type: 'knowledge',
     src: hexagon,
-    bg: '#ea9f00',
-    resize: true,
-    width: 76,
-    height: 70,
-    category: utils.localize('node-types-base-shape'),
-    buildIn: true
-  },
-  {
-    'type': 'polygon',
-    'src': polygon,
-    bg: '#f7130e',
+    bg: '#0B6E4F',
     resize: true,
     width: 76,
     height: 76,
-    'points': [
-      -0.33, -1,
-      0.33, -1,
-      0.33, -0.33,
-      1, -0.33,
-      1, 0.33,
-      0.33, 0.33,
-      0.33, 1,
-      -0.33, 1,
-      -0.33, 0.33,
-      -1, 0.33,
-      -1, -0.33,
-      -0.33, -0.33
-    ],
-    category: utils.localize('node-types-base-shape'),
+    category: utils.localize('node-types-knowledge'),
+    image: '',
     buildIn: true
   }
 ]
